@@ -44,20 +44,20 @@ export default function Navbar(props) {
           
 
             <div className="btn-group mx-1" role="group" aria-label="Third group">
-    <button type="button" className="btn btn-dark" onClick={props.modedark} style={{color:"#ffc10700"}}>8</button>
+    <button type="button" className="btn btn-dark" onClick={props.modedark} style={{height:"35px",width:"35px"}}></button>
           </div>
             <div className="btn-group mx-1" role="group" aria-label="Third group">
-    <button type="button" className="btn btn-light" onClick={props.modelight} style={{color:"#ffc10700"}}>8</button>
+    <button type="button" className="btn btn-light" onClick={props.modelight} style={{height:"35px",width:"35px"}}></button>
           </div>
   
             <div className="btn-group mx-1" role="group" aria-label="Third group">
-    <button type="button" className="btn btn-warning" onClick={props.modeyellow} style={{color:"#ffc10700"}}>8</button>
+    <button type="button" className="btn btn-warning" onClick={props.modeyellow} style={{height:"35px",width:"35px"}}></button>
           </div>
             <div className="btn-group mx-1" role="group" aria-label="Third group">
-    <button type="button" className="btn btn-danger" onClick={props.modered} style={{color:"#ffc10700"}}>8</button>
+    <button type="button" className="btn btn-danger" onClick={props.modered} style={{height:"35px",width:"35px"}}></button>
           </div>
             <div className="btn-group mx-1" role="group" aria-label="Third group">
-    <button type="button" className="btn btn-primary" onClick={props.modeblue} style={{color:"#ffc10700"}}>8</button>
+    <button type="button" className="btn btn-primary" onClick={props.modeblue} style={{height:"35px",width:"35px"}}></button>
           </div>
           </div>
         </div>
