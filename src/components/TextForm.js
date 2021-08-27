@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 export default function TextForm(props) {
-    const [text, setText] = useState("Enter text here ");
+    const [text, setText] = useState("Enter text here:");
     const [btnCopyText, setBtnCopytext] = useState("Copy text");
     // text = "vfvc"// Wrong way to change the state
     // setText("vfvc")// correct way to change the state
