@@ -5,10 +5,6 @@ export default function TextForm(props) {
     const [btnCopyText, setBtnCopytext] = useState("Copy text");
     // text = "vfvc"// Wrong way to change the state
     // setText("vfvc")// correct way to change the state
-    // const analyzedWords = ()=>{
-    //     let words text.split(" ").length
-    // }
-    let wordscount = text===""?0:text.split(/[ ]+/).length
     const handleUpClick = ()=>{
         let newText = text.toUpperCase();
         setText(newText);
@@ -55,18 +51,18 @@ export default function TextForm(props) {
         <textarea className="form-control" onChange = {handleOnChange} id="mytext" rows="3" value= {text} style={{backgroundColor : `${props.textThemedark==="dark"?"#dfe9ec":"white"}`}}></textarea>
         </div>
         <div>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handlelowClick}>Convert to lowercase </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleCapitalClick}>Capitalize</button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleExtraspaceClick}>Remove extra spaces</button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handlecopyClick}>{btnCopyText} </button>
-        <button className="btn btn-danger mx-2 my-1" onClick={handleclearClick}>Clear text </button>
+       <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handlelowClick}>Convert to lowercase </button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleCapitalClick}>Capitalize</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleExtraspaceClick}>Remove extra spaces</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handlecopyClick}>{btnCopyText} </button>
+        <button disabled={text.length===0} className="btn btn-danger mx-2 my-1" onClick={handleclearClick}>Clear text </button>
         </div>  
         </div>
         <div className="container mx-2" style={{color : `${props.textTheme==="black"?"white":"black"}`}}>
             <h1>Your text analiztion:</h1>
-            <p>{wordscount} words, {text.length} characters</p>
-            <p>{(4.16)*wordscount} sec :Read time</p>
+            <p>{text.split(/\s+/).filter((element1)=>{return element1.length!==0}).length} words, {text.length} characters</p>
+            <p>{(4.16)*text.split(/\s+/).filter((element1)=>{return element1.length!==0}).length} sec :Read time</p>
 
         </div>
         </div>        
